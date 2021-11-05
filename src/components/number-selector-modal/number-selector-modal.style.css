@@ -7,8 +7,8 @@
     border-radius: 5px;
     width: 437px;
     height: 282px;
-    max-height: 80vh;
-    max-width: 80vw;
+    max-height: 90vh;
+    max-width: 90vw;
 
     display: flex;
     flex-direction: column;

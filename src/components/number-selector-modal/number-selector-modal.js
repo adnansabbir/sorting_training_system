@@ -17,7 +17,7 @@ export const NumberSelectorModal = ({openModal, setModalState, setStartingNumber
 
     const handleSubmit = () => {
         if (inputValue.invalid) return;
-        setStartingNumber(+inputValue);
+        setStartingNumber(+inputValue.value);
         closeModal();
     }
 
@@ -42,7 +42,7 @@ export const NumberSelectorModal = ({openModal, setModalState, setStartingNumber
                     Enter a number of how many people you want to add to the list.
                 </p>
                 <input
-                    placeholder="Enter a number between 20 to 100"
+                    placeholder="Any number from 20 to 100"
                     className="input-box"
                     type="number"
                     value={inputValue.value} onChange={handleValueChange}

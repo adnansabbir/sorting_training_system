@@ -1,5 +1,49 @@
 .sorting-training-page{
-    background: aqua;
-    height: 100%;
-    width: 100%;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.sorting-training-page .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sorting-training-page .header h1{
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+@media only screen and (max-width: 900px) {
+    .sorting-training-page {
+        padding: 16px;
+    }
+
+    .sorting-training-page .header h1{
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .sorting-training-page {
+        padding: 8px;
+    }
+
+    .sorting-training-page .header h1{
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .sorting-training-page .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 16px;
+        padding-top: 16px;
+        text-align: center;
+    }
 }
