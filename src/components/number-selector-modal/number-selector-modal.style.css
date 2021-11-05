@@ -1,0 +1,90 @@
+.Modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFFFFF;
+    border-radius: 5px;
+    width: 437px;
+    height: 282px;
+    max-height: 80vh;
+    max-width: 80vw;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.53);
+}
+
+.Modal .header{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.Modal .header .title{
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0;
+}
+
+.Modal .header .cross-icon{
+    color: #999999;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.Modal .body{
+    padding: 20px;
+    flex-grow: 1;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.Modal .body .description{
+    margin: 0;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.Modal .body .input-box{
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 13px;
+    padding: 13px;
+}
+
+.Modal .button-group{
+    padding: 20px;
+    border-top: 1px solid #CCCCCC;
+
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.Modal .button-group .button{
+    border-radius: 5px;
+    width: 88px;
+    height: 40px;
+    border: none;
+}
+
+.Modal .button-group .button:hover{
+    -webkit-box-shadow: 1px 2px 10px -2px rgba(0,0,0,0.2);
+    box-shadow: 1px 2px 10px -2px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
