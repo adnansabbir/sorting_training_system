@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Sorting Training System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fun nerd game to see how fast you can sort a list
 
 ## Available Scripts
 
