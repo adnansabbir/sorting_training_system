@@ -1011,7 +1011,7 @@ const getRandomNumbers = (size, minNumber, maxNumber) => {
 }
 
 export const getUserData = (size) => {
-    if (size > 100 || size < 20) throw new Error('Size must be within 20 to 100');
+    if (size > 100 || size < 0) throw new Error('Size must be within 20 to 100');
 
     const randomIndexes = getRandomNumbers(size, 0, 99);
     const randomNumber = getRandomNumbers(size, 0, 100);

@@ -11,10 +11,11 @@
 .table .header{
     height: 72px;
     padding: 0 30px;
+
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-content: flex-end;
-    flex-flow: column wrap;
 
     font-weight: bold;
     font-size: 14px;
