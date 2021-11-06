@@ -5,7 +5,7 @@ import {Timer} from "../timer/timer";
 
 const InitialState = {
     success: false,
-    timerStatus: 'stop',
+    timerDataList: null,
     steps: 0
 };
 
@@ -13,7 +13,7 @@ export const Table = ({userData}) => {
     const [state, setState] = useState(InitialState);
 
     useEffect(() => {
-        if (userData.length) setState({...InitialState, timerStatus: 'start'});
+        if (userData.length) setState({...InitialState, timerDataList: userData});
     }, [userData])
 
     const columnsConfig = {
@@ -56,14 +56,14 @@ export const Table = ({userData}) => {
         setState({
             ...state,
             success: isSuccess,
-            timerStatus: isSuccess ? 'stop' : 'start',
+            timerDataList: isSuccess ? null : userData,
             steps: state.steps + 1
         });
     }
     return (
         <div className="table">
             <div className="header">
-                <Timer status={state.timerStatus}/>
+                <Timer dataList={state.timerDataList}/>
                 {state.success ? (<div>Congratulations! you made it with {state.steps} moves</div>) : ''}
                 <span>{userData.length || 0} people in the list</span>
             </div>

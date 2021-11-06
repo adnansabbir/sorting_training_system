@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 
-export const Timer = ({status}) => {
+export const Timer = ({dataList}) => {
     const [timeSpend, setTimeSpend] = useState(null);
     const [intervalRef, setIntervalRef] = useState(null);
     let elapsedTime = 0;
@@ -28,24 +28,19 @@ export const Timer = ({status}) => {
     }
 
     useEffect(() => {
-        switch (status) {
-            case 'start':
-                startTimer();
-                break
-            default:
-                stopTimer();
-        }
+        stopTimer();
+        if(dataList && dataList.length) startTimer();
         return () => {
             if (intervalRef) clearInterval(intervalRef);
         }
-    }, [status]);
+    }, [dataList]);
 
     if (!timeSpend) return (<div/>)
 
     const {days, hours, minutes, seconds} = timeSpend;
     return (
         <div className="timers">
-            <span>{status === 'start' ? 'Time spent' : 'Last time'} : {days ? `${days}d` : ''} {hours ? `${hours}h` : ''} {minutes ? `${minutes}m` : ''} {`${seconds}s`}</span>
+            <span>{dataList ? 'Time spent' : 'Last time'} : {days ? `${days}d` : ''} {hours ? `${hours}h` : ''} {minutes ? `${minutes}m` : ''} {`${seconds}s`}</span>
         </div>
     )
 }

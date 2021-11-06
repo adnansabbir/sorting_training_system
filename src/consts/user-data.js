@@ -1002,7 +1002,7 @@ const UserData = [
 ];
 
 const getRandomNumbers = (size, minNumber, maxNumber) => {
-    if (maxNumber - minNumber < size) throw new Error(`Difference of min max should be greater than ${size}`);
+    if (maxNumber - minNumber < size-1) throw new Error(`Difference of min max should be greater than ${size}`);
     const unique = new Set();
     while (unique.size < size) {
         unique.add(Math.floor(Math.random() * (maxNumber - minNumber + 1) + minNumber));
