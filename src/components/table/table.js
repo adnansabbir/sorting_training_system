@@ -5,7 +5,7 @@ import {Timer} from "../timer/timer";
 
 const InitialState = {
     success: false,
-    timerStatus: 'start',
+    timerStatus: 'stop',
     steps: 0
 };
 
@@ -13,7 +13,7 @@ export const Table = ({userData}) => {
     const [state, setState] = useState(InitialState);
 
     useEffect(() => {
-        setState(InitialState);
+        if (userData.length) setState({...InitialState, timerStatus: 'start'});
     }, [userData])
 
     const columnsConfig = {
