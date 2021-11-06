@@ -1,0 +1,7 @@
+#draggable-data-list .dragging-row{
+    background-color: rgba(255, 141, 0, 0.5);
+}
+
+#draggable-data-list .data-row{
+    height: 50px;
+}

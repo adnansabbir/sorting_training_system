@@ -22,9 +22,10 @@
     color: #000000;
 }
 
-.table .column-names{
+.table .column-names, .row-template{
     display: flex;
     border: 1px solid #DDDDDD;
+    border-bottom: none;
     height: 48px;
 
     color: #555555;
@@ -32,11 +33,24 @@
     font-size: 14px;
 }
 
-.table .column-names .column-name-cell{
+.table .column-name-cell, .row-cell{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 0 20px;
+    flex-basis: 0;
+}
+
+.table .row-template{
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+}
+
+.table .row-cell .tags{
+    background: #EEEEEE;
+    padding: 6px 10px;
+    border-radius: 16px;
 }
 
 .table .column-names > .column-name-cell{
@@ -45,4 +59,20 @@
 
 .table .column-names > .column-name-cell ~ .column-name-cell{
     border-right: none;
+}
+
+.table .row-template > .row-cell{
+    border-right: 1px solid #DDDDDD;
+}
+
+.table .row-template > .row-cell ~ .row-cell{
+    border-right: none;
+}
+
+.table .email-data{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }

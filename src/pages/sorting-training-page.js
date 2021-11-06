@@ -6,7 +6,7 @@ import {StartSortingButton} from "../components/start-sorting-button/start-sorti
 import {Table} from "../components/table/table";
 
 export const SortingTrainingPage = () => {
-    const [userData, setUserData] = useState([]);
+    const [userData, setUserData] = useState(getUserData(20));
 
     const handleNumberEntered = (number) => {
         setUserData(getUserData(number));
